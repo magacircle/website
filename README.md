@@ -1,22 +1,12 @@
-# MagaCircle™ v1.6 — Responsive Landing Redesign
+# MagaCircle™ v1.8 — Exact Mockup Landing Page
 
-This build preserves the approved mobile landing-page artwork and introduces a purpose-built desktop/laptop composition using the same approved MagaCircle™ copy and visual language.
+This prototype preserves the existing MagaCircle™ quiz flow but replaces the landing page visual implementation with the supplied desktop landing-page mockup as the exact visual source.
 
-## Landing-page copy used
-- HELP BUILD MAGACIRCLE™
-- MagaCircle™ is being built around the people who will use it.
-- Tell us a little about yourself, what you're looking for, and what you'd like to accomplish.
-- 10 questions.
-- No right or wrong answers.
-- POWER TO THE PEOPLE
+## Landing page
+- Desktop/laptop: `assets/desktop_landing_mockup_exact.png` is displayed responsively at full browser width.
+- Mobile: `assets/approved_landing_mobile.png` is displayed as the approved mobile landing design.
+- Transparent functional hotspots make the visible desktop/mobile CTAs clickable and route into the existing name/email form.
+- The desktop image includes the exact mockup copy and visual composition. No additional slogan or 8-stage journey is added.
 
-The desktop layout is intentionally NOT a stretched mobile card. It uses the same brand, copy, flag/crowd visual language, CTA, and hierarchy in a wider composition.
-
-## Responsive behavior
-- <=700px: approved portrait landing artwork.
-- 701–1100px: tablet/small laptop adaptation.
-- >1100px: full desktop hero.
-- The rest of the existing quiz/prototype flow remains functional.
-
-## Run
-Open index.html directly or use GitHub Pages.
+## GitHub Pages
+Upload `index.html`, `styles.css`, `app.js`, and the `assets` folder to the repository. Open the GitHub Pages URL and test the landing CTA.

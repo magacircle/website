@@ -18,45 +18,18 @@ function brand(){return `<div class="brand">${logo()}<div class="power"><span>�
 function desktopHeader(active=''){return `<header class="desktop-header"><div>${logo()}</div><nav><a>About</a><a>Vision</a><a>FAQ</a><button class="nav-cta" onclick="go('form')">Join the Waitlist</button></nav></header>`}
 function shell(content,cls=''){document.getElementById('app').innerHTML=`<div class="app"><main class="shell ${cls}">${content}</main></div>`}
 function landing(){
-shell(`<section class="screen landing-screen">
-  <header class="desktop-header landing-header">
-    <div class="header-brand">${logo()}<div class="header-power"><span>★</span> POWER TO THE PEOPLE <span>★</span></div></div>
-    <nav>
-      <a href="#" onclick="return false">About</a>
-      <a href="#" onclick="return false">Vision</a>
-      <a href="#" onclick="return false">FAQ</a>
-      <button class="nav-cta" onclick="go('form')">Join the Waitlist</button>
-    </nav>
-  </header>
-  <div class="mobile-landing">
-    <img src="assets/approved_landing_mobile.png" alt="MagaCircle™ landing page" class="approved-mobile-art">
-    <button class="mobile-landing-hotspot" aria-label="Let's begin" onclick="go('form')"></button>
+shell(`<section class="screen landing-screen exact-landing-screen">
+  <div class="exact-desktop-landing">
+    <img src="assets/desktop_landing_mockup_exact.png" alt="MagaCircle™ desktop landing page" class="exact-desktop-art">
+    <button class="exact-hotspot desktop-begin" aria-label="Let's begin" onclick="go('form')"></button>
+    <button class="exact-hotspot desktop-waitlist" aria-label="Join the Waitlist" onclick="go('form')"></button>
   </div>
-  <div class="desktop-landing">
-    <div class="desktop-hero-art" aria-hidden="true">
-      <div class="hero-flag"></div>
-      <div class="hero-crowd"></div>
-      <div class="hero-fade"></div>
-    </div>
-    <div class="desktop-hero-content">
-      <div class="hero-logo">${logo()}</div>
-      <div class="hero-power">POWER <span>TO THE PEOPLE.</span></div>
-      <div class="hero-rule"><i></i></div>
-      <h1>HELP BUILD <span>MAGACIRCLE™</span></h1>
-      <p class="hero-lede">MagaCircle™ is being built around the people who will use it.</p>
-      <p class="hero-lede secondary">Tell us a little about yourself, what you're looking for, and what you'd like to accomplish.</p>
-      <div class="hero-voice"><div class="voice-mark">★</div><div><strong>YOUR VOICE MATTERS</strong><span>Take the quiz and help shape the future of MagaCircle™.</span></div></div>
-      <div class="hero-promises">
-        <div class="promise"><span class="promise-icon">✓</span><div><strong>10 QUICK QUESTIONS</strong><small>No right or wrong answers. Just your honest perspective.</small></div></div>
-        <div class="promise"><span class="promise-icon">✓</span><div><strong>YOUR ANSWERS HELP SHAPE MAGACIRCLE™</strong><small>What you tell us helps us build it around you.</small></div></div>
-      </div>
-      <button class="btn red desktop-hero-cta" onclick="go('form')">LET'S BEGIN <span>→</span></button>
-      <div class="hero-note">It takes less than 2 minutes.</div>
-    </div>
-    <div class="desktop-bottom-brand"><span>★</span> POWER TO THE PEOPLE <span>★</span></div>
+  <div class="exact-mobile-landing">
+    <img src="assets/approved_landing_mobile.png" alt="MagaCircle™ mobile landing page" class="exact-mobile-art">
+    <button class="exact-hotspot mobile-begin" aria-label="Let's begin" onclick="go('form')"></button>
   </div>
-</section>`)
-}
+  <div class="sr-only">MagaCircle™ — Power to the People. Help Build MagaCircle™. MagaCircle™ is being built around the people who will use it. Tell us a little about yourself, what you're looking for, and what you'd like to accomplish. Take the quiz and help shape the future of MagaCircle™. Let's begin.</div>
+</section>`)}
 function form(){shell(`<section class="screen form-screen">${desktopHeader()}<div class="mobile-only">${brand()}</div><div class="form-wrap"><div class="steps"><span class="on">1</span><i></i><span>2</span></div><h1>Let’s Get Started</h1><p>Enter your info to take the quiz and join the movement.</p><div class="form-card"><div class="form-grid"><label>Your Name<input id="name" placeholder="John Patriot" value="${state.name}"></label><label>Email Address<input id="email" type="email" placeholder="john@example.com" value="${state.email}"></label></div><button class="btn red" onclick="startQuiz()">Continue to Quiz <span>→</span></button><small>🔒 We respect your privacy. Unsubscribe anytime.</small></div></div></section>`)}
 function quiz(){let x=Q[state.q],sel=state.answers[state.q],pct=(state.q+1)*10;let ans=x.a.map((a,i)=>`<button class="answer ${sel===i?'selected '+x.tone:''}" onclick="pick(${i})"><span class="radio">${sel===i?'✓':'○'}</span><span>${a}</span></button>`).join('');shell(`<section class="screen quiz-screen">${desktopHeader()}<div class="mobile-only">${brand()}</div><div class="quiz-wrap"><div class="quiz-top"><div class="quiz-logo">${logo()}</div><div class="progress-area"><span class="qcount">Question ${state.q+1} of 10</span><div class="progress"><span style="width:${pct}%;background:${toneColor(x.tone)}"></span></div></div></div><div class="section-name" style="color:${toneColor(x.tone)}">${x.section}</div><h1 class="question">${x.q}</h1><div class="answers">${ans}</div><div class="navrow"><button class="back" onclick="back()">← Back</button><button class="btn ${x.tone==='red'?'red':x.tone==='green'?'green':'navy'}" onclick="nextQ()">Next <span>→</span></button></div></div></section>`)}
 function transition(kind){let first=kind===3; shell(`<section class="screen transition ${first?'':'red'}">${desktopHeader()}<div class="mobile-only">${brand()}</div><div class="transition-card"><div class="circle-icon">${first?'👥':'🚀'}</div><h2>${first?'NOW LET’S TALK ABOUT<br>WHAT YOU WANT.':'NOW LET’S THINK BIG.'}</h2><p>${first?'You told us a little about who you are.<br>Now let’s explore what you’re looking for—and what you’d like to accomplish.':'You’ve told us what you’re looking for.<br>Now imagine what you could accomplish with the right people around you.'}</p><button class="btn ${first?'navy':'red'}" onclick="resume(${kind})">${first?'CONTINUE':'LET’S GO'} <span>→</span></button></div></section>`)}
