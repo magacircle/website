@@ -1,26 +1,22 @@
-# MagaCircle™ — Working Prototype (Mockup-Faithful)
+# MagaCircle™ v1.2 — Mockup-faithful working prototype
 
-This version is a functional single-page prototype designed directly from the supplied MagaCircle™ mockup. The mockup's numbered 8-stage journey labels are **not part of the website UI**; they were removed and were only useful as design annotations.
+This version removes the design-board annotations and the added slogan. It is a one-screen-at-a-time functional prototype based on the supplied MagaCircle™ mockup.
 
 ## Included
-- Landing page
-- Name + email capture
-- All 10 locked quiz questions
-- One-question-at-a-time interaction
-- Progress bar and back navigation
-- Section transition screens
-- Processing screen
-- MagaCircle™ profile result
-- Invite-5 referral flow
-- Share controls
-- Prototype referral simulator
-- Waitlist confirmation
-- LocalStorage persistence
-- Responsive/mobile layout
-- No external libraries or hosted assets required
+- Landing page matching the mockup composition: MagaCircle™, POWER TO THE PEOPLE, HELP BUILD MAGACIRCLE™, flag/crowd imagery, copy and LET'S BEGIN.
+- Name/email capture.
+- All 10 locked quiz questions, including the $50,000 question.
+- One-question-per-screen quiz, progress, back button and section transitions.
+- Processing screen and Builder profile.
+- Invite-5 referral flow with test counter.
+- 5/5 success/waitlist screen.
+- Invitation/share preview.
+- Responsive mobile/desktop layout.
 
-## Test the referral flow
-On the referral screen open **Prototype testing controls** and use **SIMULATE 1 REFERRAL** five times. This is prototype-only; production referral tracking needs unique referral links and server-side verification.
+## Assets
+The `assets` folder contains cropped visual elements derived from the supplied mockup for the flag and crowd treatments.
 
 ## GitHub Pages
-Upload `index.html`, `styles.css`, and `app.js` to a repository and enable GitHub Pages. Open the published URL and test the full flow.
+Upload `index.html`, `styles.css`, `app.js`, and the `assets` folder to the repository root and enable GitHub Pages.
+
+Referral tracking is simulated locally for prototype testing. Production referral verification should be server-side.
