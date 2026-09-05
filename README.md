@@ -1,15 +1,22 @@
-# MagaCircle™ v1.5 — Responsive Desktop/Laptop + Mobile
+# MagaCircle™ v1.6 — Responsive Landing Redesign
 
-This build keeps the approved mobile-first experience while adding a genuinely different wide desktop/laptop composition.
+This build preserves the approved mobile landing-page artwork and introduces a purpose-built desktop/laptop composition using the same approved MagaCircle™ copy and visual language.
+
+## Landing-page copy used
+- HELP BUILD MAGACIRCLE™
+- MagaCircle™ is being built around the people who will use it.
+- Tell us a little about yourself, what you're looking for, and what you'd like to accomplish.
+- 10 questions.
+- No right or wrong answers.
+- POWER TO THE PEOPLE
+
+The desktop layout is intentionally NOT a stretched mobile card. It uses the same brand, copy, flag/crowd visual language, CTA, and hierarchy in a wider composition.
 
 ## Responsive behavior
-- Desktop/laptop (901px+): wide website composition, horizontal navigation, wide hero/forms/quiz panels.
-- Tablet/iPad: adaptive layout between desktop and mobile, depending on viewport width.
-- Phone (900px and below): mobile-first portrait experience.
-- Landscape and shorter laptop screens use viewport-aware sizing.
+- <=700px: approved portrait landing artwork.
+- 701–1100px: tablet/small laptop adaptation.
+- >1100px: full desktop hero.
+- The rest of the existing quiz/prototype flow remains functional.
 
-## Important
-- No 8-stage journey/header.
-- No extra slogan beyond POWER TO THE PEOPLE.
-- Locked 10 questions preserved, including the $50,000 question.
-- GitHub Pages compatible; no external libraries required.
+## Run
+Open index.html directly or use GitHub Pages.
