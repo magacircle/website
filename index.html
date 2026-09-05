@@ -1,177 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MagaCircle™ — Power to the People. Help build MagaCircle™ and discover your profile." />
-  <title>MagaCircle™ — Power to the People</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MagaCircle™ — Working Prototype</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <header class="site-header">
-      <div class="brand"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-      <div class="header-right"><div class="tagline">★ &nbsp; POWER TO THE PEOPLE &nbsp; ★</div><div class="header-micro">— &nbsp; WE BUILD TOGETHER. &nbsp; <span>WE WIN TOGETHER.</span> &nbsp; —</div></div>
-    </header>
+<div class="site-shell">
+<header class="topbar">
+  <div class="brand-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div>
+  <div class="top-tag">★ &nbsp; POWER TO THE PEOPLE &nbsp; ★</div>
+  <div class="top-motto"><span>—</span> WE BUILD TOGETHER. <strong>WE WIN TOGETHER.</strong> <span>—</span></div>
+</header>
+<nav class="journey" id="journey">
+  <div class="jstep active" data-j="1"><b>1</b><small>LANDING</small></div><i>→</i>
+  <div class="jstep" data-j="2"><b>2</b><small>NAME &amp; EMAIL</small></div><i>→</i>
+  <div class="jstep" data-j="3"><b>3</b><small>QUIZ: Q1–3<br>WHO ARE YOU?</small></div><i>→</i>
+  <div class="jstep" data-j="4"><b>4</b><small>QUIZ: Q4–7<br>WHAT DO YOU WANT?</small></div><i>→</i>
+  <div class="jstep" data-j="5"><b>5</b><small>QUIZ: Q8–10<br>WHAT WOULD YOU BUILD?</small></div><i>→</i>
+  <div class="jstep" data-j="6"><b>6</b><small>YOUR MAGACIRCLE™<br>PROFILE</small></div><i>→</i>
+  <div class="jstep" data-j="7"><b>7</b><small>INVITE 5 PEOPLE</small></div><i>→</i>
+  <div class="jstep" data-j="8"><b>8</b><small>YOU’RE IN!<br>JOIN THE WAITLIST</small></div>
+</nav>
+<main>
+<section class="screen active" data-screen="landing"><div class="phone landing-card">
+  <div class="flag-top"></div><div class="stars">★　★　★</div>
+  <div class="screen-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div>
+  <div class="micro-tag">★ POWER TO THE PEOPLE ★</div>
+  <h1>HELP BUILD<br><em>MagaCircle™</em></h1>
+  <p class="lead">MagaCircle™ is being built around the people who will use it.</p>
+  <p>Tell us a little about yourself,<br>what you're looking for, and<br>what you'd like to accomplish.</p>
+  <ul class="ticks"><li>10 questions.</li><li>No right or wrong answers.</li></ul>
+  <div class="crowd"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <button class="btn red" data-go="contact">LET’S BEGIN <b>→</b></button>
+</div></section>
 
-    <nav class="journey" aria-label="MagaCircle journey">
-      <div class="journey-step active" data-journey="1"><b>1</b><span>LANDING</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="2"><b>2</b><span>NAME &amp; EMAIL</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="3"><b>3</b><span>QUIZ: Q1–3<br>WHO ARE YOU?</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="4"><b>4</b><span>QUIZ: Q4–7<br>WHAT DO YOU WANT?</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="5"><b>5</b><span>QUIZ: Q8–10<br>WHAT WOULD YOU BUILD?</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="6"><b>6</b><span>YOUR MAGACIRCLE™<br>PROFILE</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="7"><b>7</b><span>INVITE 5 PEOPLE</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step" data-journey="8"><b>8</b><span>YOU’RE IN!<br>JOIN THE WAITLIST</span></div>
-    </nav>
+<section class="screen" data-screen="contact"><div class="phone light-card contact-card">
+  <div class="screen-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div><div class="micro-tag">★ POWER TO THE PEOPLE ★</div>
+  <h2>FIRST, LET’S<br><strong>GET TO KNOW YOU</strong></h2>
+  <form id="contactForm">
+   <label>What's your name?</label><input id="name" required placeholder="First Name">
+   <label>Where should we send your<br>MagaCircle™ launch invitation?</label><input id="email" type="email" required placeholder="Email Address">
+   <button class="btn red" type="submit">START THE QUIZ <b>→</b></button>
+   <p class="privacy">♙ We’ll use your email to keep you<br>updated about the MagaCircle™ launch.</p>
+  </form>
+</div></section>
 
-    <main>
-      <!-- 1. Landing -->
-      <section class="screen hero-screen active" data-screen="landing">
-        <div class="hero-card">
-        <div class="hero-flag" aria-hidden="true"></div>
-        <div class="hero-content">
-          <div class="hero-brand"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <div class="tagline hero-tagline">★ &nbsp; POWER TO THE PEOPLE &nbsp; ★</div>
-          <h1>HELP BUILD<br><span>MagaCircle™</span></h1>
-          <p class="lead">MagaCircle™ is being built around the people who will use it.</p>
-          <p>Tell us a little about yourself, what you're looking for, and what you'd like to accomplish.</p>
-          <div class="mini-points"><span>✓ 10 questions</span><span>✓ No right or wrong answers</span></div>
-          <button class="btn btn-red" data-action="begin">LET'S BEGIN <span>→</span></button>
-        </div>
-        <div class="crowd" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-      </section>
+<section class="screen" data-screen="quiz"><div class="phone light-card quiz-card">
+ <div class="screen-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div>
+ <div class="counter" id="counter">1 / 10</div><div class="progress"><span id="progress"></span></div>
+ <div class="section-title" id="sectionTitle">WHO ARE YOU?</div><h2 id="question"></h2><div id="options" class="options"></div>
+ <div class="quiz-actions"><button id="backBtn" class="back">← BACK</button><button id="nextBtn" class="btn blue" disabled>CONTINUE <b>→</b></button></div>
+</div></section>
 
-      <!-- 2. Name + Email -->
-      <section class="screen form-screen" data-screen="contact">
-        <div class="screen-card">
-          <div class="brand small"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <div class="form-intro">FIRST, LET’S<br><strong>GET TO KNOW YOU</strong></div>
-          <form id="contactForm">
-            <label for="name">What's your name?</label>
-            <input id="name" name="name" type="text" autocomplete="given-name" placeholder="First Name" required />
-            <label for="email">Where should we send your MagaCircle™ launch invitation?</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="Email Address" required />
-            <button class="btn btn-red" type="submit">START THE QUIZ <span>→</span></button>
-            <p class="privacy-note">🔒 We'll use your email to keep you updated about the MagaCircle™ launch.</p>
-          </form>
-        </div>
-      </section>
+<section class="screen" data-screen="transition3"><div class="phone light-card transition-card"><div class="circle-icon">●</div><div class="section-title">WHO ARE YOU? ✓</div><h2>NOW LET’S TALK<br>ABOUT WHAT YOU WANT.</h2><p>You told us a little about who you are.</p><p>Now let’s explore what you’re looking for—and what you’d like to accomplish.</p><button class="btn blue" data-action="q4">CONTINUE <b>→</b></button></div></section>
+<section class="screen" data-screen="transition7"><div class="phone light-card transition-card red-transition"><div class="rocket">↗</div><div class="section-title redtxt">WHAT DO YOU WANT? ✓</div><h2>NOW LET’S THINK BIG.</h2><p>You’ve told us what you’re looking for.</p><p>Now imagine what you could accomplish with the right people around you.</p><button class="btn red" data-action="q8">LET’S GO <b>→</b></button></div></section>
 
-      <!-- Quiz -->
-      <section class="screen quiz-screen" data-screen="quiz">
-        <div class="quiz-wrap">
-          <div class="quiz-brand"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <div class="progress-row"><span id="questionCounter">1 / 10</span><div class="progress-track"><div id="progressFill"></div></div></div>
-          <div id="sectionLabel" class="section-label">WHO ARE YOU?</div>
-          <h2 id="questionText"></h2>
-          <div id="options" class="options"></div>
-          <div class="quiz-actions"><button class="back-link" id="backBtn">← BACK</button><button class="btn btn-blue" id="continueBtn" disabled>CONTINUE <span>→</span></button></div>
-        </div>
-      </section>
+<section class="screen" data-screen="processing"><div class="phone light-card processing-card"><div class="screen-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div><div class="spinner"></div><h2>ANALYZING YOUR ANSWERS...</h2><ul><li>✓ Connecting the dots...</li><li>✓ Discovering your strengths...</li><li>✓ Building your unique profile...</li><li>✓ Almost there!</li></ul></div></section>
 
-      <!-- Transitions -->
-      <section class="screen transition-screen" data-screen="transition3">
-        <div class="transition-card">
-          <div class="transition-icon">●</div>
-          <div class="section-label">WHO ARE YOU? ✓</div>
-          <h2>NOW LET'S TALK<br>ABOUT WHAT YOU WANT.</h2>
-          <p>You told us a little about who you are.</p>
-          <p>Now let's explore what you're looking for—and what you'd like to accomplish.</p>
-          <button class="btn btn-blue" data-action="toQuiz4">CONTINUE <span>→</span></button>
-        </div>
-      </section>
+<section class="screen" data-screen="profile"><div class="phone profile-card"><div class="profile-flag"></div><div class="screen-logo white"><span>Maga</span><b>Circle</b><sup>™</sup></div><div class="micro-tag white-tag">★ POWER TO THE PEOPLE ★</div><h2>YOUR<br>MAGACIRCLE™<br>PROFILE</h2><div class="ribbon" id="profileRibbon">YOU’RE A BUILDER</div><div class="profile-icon" id="profileIcon">⚒</div><h3 id="profileTitle">You turn ideas into action.</h3><p id="profileDesc"></p><h5>YOUR STRENGTHS</h5><div class="pill" id="profileStrengths"></div><h5>WHAT YOU’RE LOOKING FOR</h5><div class="pill" id="profileLooking"></div><button class="btn red" data-action="referral">NEXT: INVITE 5 PEOPLE <b>→</b></button></div></section>
 
-      <section class="screen transition-screen" data-screen="transition7">
-        <div class="transition-card flag-card">
-          <div class="transition-icon red">↗</div>
-          <div class="section-label red-text">WHAT DO YOU WANT? ✓</div>
-          <h2>NOW LET'S THINK BIG.</h2>
-          <p>You've told us what you're looking for.</p>
-          <p>Now imagine what you could accomplish with the right people around you.</p>
-          <button class="btn btn-red" data-action="toQuiz8">LET'S GO <span>→</span></button>
-        </div>
-      </section>
+<section class="screen" data-screen="referral"><div class="phone light-card referral-card"><div class="screen-logo"><span>Maga</span><b>Circle</b><sup>™</sup></div><div class="micro-tag">★ POWER TO THE PEOPLE ★</div><div class="people-icon">♙♙</div><h2>YOUR MAGACIRCLE™<br>ISN’T COMPLETE YET.</h2><p>MagaCircle™ is built around<br>people connecting with people.</p><p>You just told us what you want<br>to accomplish.</p><p>Now invite the people you think<br>should be part of MagaCircle™.</p><div class="ref-count"><span id="refCount">0</span> / 5</div><div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i></div><button class="btn red" data-action="share">INVITE 5 PEOPLE</button><div class="share-row hidden" id="sharePanel"><button data-share="text">💬<small>Text</small></button><button data-share="email">✉<small>Email</small></button><button data-share="copy">↗<small>Copy Link</small></button><button data-share="native">●<small>Share</small></button></div><p id="shareStatus" class="status"></p><details class="test"><summary>Prototype testing controls</summary><button data-action="simulate" class="btn outline">SIMULATE 1 REFERRAL</button><button data-action="reset" class="reset">Reset</button></details></div></section>
 
-      <!-- Processing -->
-      <section class="screen processing-screen" data-screen="processing">
-        <div class="processing-card">
-          <div class="spinner"></div>
-          <div class="brand small"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <h2>ANALYZING YOUR ANSWERS...</h2>
-          <div class="processing-list"><p>✓ Connecting the dots...</p><p>✓ Discovering your strengths...</p><p>✓ Building your unique profile...</p><p>✓ Almost there!</p></div>
-        </div>
-      </section>
-
-      <!-- Profile -->
-      <section class="screen profile-screen" data-screen="profile">
-        <div class="profile-flag" aria-hidden="true"></div>
-        <div class="profile-card">
-          <div class="tagline profile-tagline">POWER TO THE PEOPLE</div>
-          <div class="brand white-brand">MagaCircle<sup>™</sup></div>
-          <div class="profile-eyebrow">YOUR MAGACIRCLE™ PROFILE</div>
-          <div id="profileIcon" class="profile-icon">🔨</div>
-          <div id="profileRibbon" class="profile-ribbon">YOU'RE A BUILDER</div>
-          <h2 id="profileTitle">You turn ideas into action.</h2>
-          <p id="profileDescription"></p>
-          <div class="profile-columns">
-            <div><h3>YOUR STRENGTHS</h3><p id="profileStrengths"></p></div>
-            <div><h3>WHAT YOU'RE LOOKING FOR</h3><p id="profileLooking"></p></div>
-          </div>
-          <div class="profile-help"><h3>WHAT MAGACIRCLE™ COULD HELP YOU DO</h3><p id="profileHelp"></p></div>
-          <button class="btn btn-red" data-action="toReferral">BUILD YOUR MAGACIRCLE™ <span>→</span></button>
-        </div>
-      </section>
-
-      <!-- Referral -->
-      <section class="screen referral-screen" data-screen="referral">
-        <div class="referral-card">
-          <div class="brand small"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <div class="section-label">HELP BUILD MAGACIRCLE™</div>
-          <h2 id="referralGreeting">Your MagaCircle™ starts here.</h2>
-          <p>MagaCircle™ is being built around the people who will use it.</p>
-          <p>Now invite <strong>5 people</strong> you think should be part of MagaCircle™.</p>
-          <div class="ref-count"><span id="refCount">0</span> / 5</div>
-          <div class="ref-dots" id="refDots"><span></span><span></span><span></span><span></span><span></span></div>
-          <button class="btn btn-red" data-action="showShare">INVITE PEOPLE <span>→</span></button>
-          <div id="sharePanel" class="share-panel hidden">
-            <button class="share-btn" data-share="text">💬<span>TEXT</span></button>
-            <button class="share-btn" data-share="email">✉️<span>EMAIL</span></button>
-            <button class="share-btn" data-share="copy">🔗<span>COPY LINK</span></button>
-            <button class="share-btn" data-share="native">↗️<span>SHARE</span></button>
-          </div>
-          <p id="shareStatus" class="share-status"></p>
-          <details class="test-controls">
-            <summary>Prototype testing controls</summary>
-            <p>These controls simulate verified referrals for your GitHub test. They are clearly labeled so they can be removed before launch.</p>
-            <button class="btn btn-outline" data-action="testReferral">SIMULATE 1 REFERRAL</button>
-            <button class="text-btn" data-action="resetReferrals">Reset test progress</button>
-          </details>
-        </div>
-      </section>
-
-      <!-- Waitlist -->
-      <section class="screen waitlist-screen" data-screen="waitlist">
-        <div class="waitlist-flag" aria-hidden="true"></div>
-        <div class="waitlist-card">
-          <div class="tagline">POWER TO THE PEOPLE</div>
-          <div class="brand white-brand">MagaCircle<sup>™</sup></div>
-          <div class="checkmark">✓</div>
-          <h1>YOU DID IT!</h1>
-          <p class="big-copy">You've invited 5 people.</p>
-          <h2>YOU'RE ON THE LIST</h2>
-          <p>You've officially secured your place on the MagaCircle™ launch waitlist.</p>
-          <div class="next-card"><strong>WHAT'S NEXT?</strong><p>We'll keep you updated as we get closer to launch. Membership levels and launch options will be revealed before MagaCircle™ goes live.</p></div>
-          <button class="btn btn-red" data-action="showShareAgain">SHARE MAGACIRCLE™</button>
-          <button class="btn btn-outline-white" data-action="home">RETURN TO HOME</button>
-          <div id="finalSharePanel" class="share-panel hidden light"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">POWER TO THE PEOPLE <span>★</span> WE BUILD TOGETHER. <span>★</span> WE WIN TOGETHER.</footer>
-  </div>
-  <script src="app.js"></script>
-</body>
-</html>
+<section class="screen" data-screen="waitlist"><div class="phone wait-card"><div class="wait-flag"></div><div class="screen-logo white"><span>Maga</span><b>Circle</b><sup>™</sup></div><div class="micro-tag white-tag">★ POWER TO THE PEOPLE ★</div><h1>YOU’RE IN!</h1><div class="big-check">✓</div><p>You’ve officially secured your<br>place on the MagaCircle™<br>launch waitlist.</p><h2>WELCOME TO<br>MAGACIRCLE™</h2><p>Thank you for helping shape<br>what MagaCircle™ becomes.</p><p>We’ll keep you updated as<br>we get closer to launch.</p><button class="btn red" data-action="shareFinal">SHARE MAGACIRCLE™</button><button class="btn outline-white" data-action="home">RETURN TO HOME</button><div id="finalShare" class="share-row hidden"></div></div></section>
+</main>
+<footer>POWER TO THE PEOPLE <span>★</span> WE BUILD TOGETHER. <span>★</span> WE WIN TOGETHER</footer>
+</div>
+<script src="app.js"></script>
+</body></html>

@@ -1,31 +1,19 @@
-# MagaCircle™ v1.1 — Visual + Functional Prototype
+# MagaCircle™ Working Prototype — Mockup-Faithful V1.1
 
-This version keeps the tested v2 functionality and implements the selected MagaCircle™ visual direction from the design mockup.
+This version preserves the functional quiz/referral prototype while rebuilding the visual layer around the supplied Version B mockup: narrow card proportions, header/journey strip, compact quiz cards, patriotic hero/profile/waitlist cards, and the same visual hierarchy.
 
-## Included
-- Landing page with patriotic background treatment and crowd visual
-- POWER TO THE PEOPLE branding
+## Run
+Open `index.html` directly or deploy the folder to GitHub Pages.
+
+## Prototype behavior
 - Name/email capture
-- Exact locked 10-question quiz
-- One question per screen
-- Progress bar and back navigation
-- Section transition screens
-- Processing animation
-- 5 profile types
-- Profile identity card
-- Invite 5 referral flow
-- Text, email, copy-link and native share options
-- Prototype referral simulation controls
-- 5/5 waitlist confirmation
-- Responsive/mobile layout
-- LocalStorage prototype persistence
-- Slim journey indicator matching the mockup direction
+- Locked 10-question quiz, one question per screen
+- Back navigation and progress
+- Section transitions
+- Profile scoring and profile card
+- Referral/share flow
+- Prototype referral simulator under “Prototype testing controls”
+- LocalStorage persistence
 
-## Test locally
-Open `index.html` in a browser or serve the folder with any static web server.
-
-## GitHub Pages
-Upload `index.html`, `styles.css`, `app.js`, and this README to a repository and enable GitHub Pages.
-
-## Important production notes
-The referral counter is only a prototype. A production launch should use unique referral links, server-side referral attribution/verification, anti-abuse controls, consent/privacy language, analytics, and a real waitlist database/email service.
+## Before production
+Referral counts must be verified server-side with unique referral links. Email capture, waitlist storage, analytics, consent/privacy language, and actual sharing/referral attribution need a production backend.
