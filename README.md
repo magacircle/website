@@ -1,14 +1,14 @@
-# MagaCircle™ Mockup-Matched Working Prototype
+# MagaCircle™ v1.4
 
-This prototype uses the supplied MagaCircle™ mockup as the visual design reference. It removes the numbered journey header and the extra slogan. The interactive flow remains functional: landing → name/email → 10-question quiz → transitions → profile → invite 5 → waitlist.
+Responsive working prototype based on the approved mockup direction.
 
-## Files
-- index.html
-- styles.css
-- app.js
-- assets/crowd_strip.png
-- assets/flag_strip.png
-- assets/mockup_reference.png
+## Important
+- The approved landing-page artwork is preserved as the exact supplied mockup crop.
+- No 8-stage journey/header is included.
+- No extra “We Build Together / We Win Together” slogan is included.
+- Desktop/laptop layouts keep the portrait experience centered at a deliberate size instead of stretching it across the screen.
+- Mobile uses the full-screen portrait experience.
+- Existing quiz, profile, referral, waitlist, and sharing functionality remains in place.
 
 ## Run
-Open `index.html` locally or deploy the folder to GitHub Pages.
+Open `index.html` directly or serve the folder through any static web server/GitHub Pages.
