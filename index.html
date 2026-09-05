@@ -11,24 +11,28 @@
   <div id="app">
     <header class="site-header">
       <div class="brand"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-      <div class="tagline">POWER TO THE PEOPLE</div>
+      <div class="header-right"><div class="tagline">★ &nbsp; POWER TO THE PEOPLE &nbsp; ★</div><div class="header-micro">— &nbsp; WE BUILD TOGETHER. &nbsp; <span>WE WIN TOGETHER.</span> &nbsp; —</div></div>
     </header>
 
     <nav class="journey" aria-label="MagaCircle journey">
-      <div class="journey-step active"><b>1</b><span>LANDING</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step"><b>2</b><span>NAME &amp; EMAIL</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step"><b>3</b><span>QUIZ</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step"><b>4</b><span>YOUR PROFILE</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step"><b>5</b><span>INVITE 5</span></div><div class="journey-arrow">→</div>
-      <div class="journey-step"><b>6</b><span>WAITLIST</span></div>
+      <div class="journey-step active" data-journey="1"><b>1</b><span>LANDING</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="2"><b>2</b><span>NAME &amp; EMAIL</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="3"><b>3</b><span>QUIZ: Q1–3<br>WHO ARE YOU?</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="4"><b>4</b><span>QUIZ: Q4–7<br>WHAT DO YOU WANT?</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="5"><b>5</b><span>QUIZ: Q8–10<br>WHAT WOULD YOU BUILD?</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="6"><b>6</b><span>YOUR MAGACIRCLE™<br>PROFILE</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="7"><b>7</b><span>INVITE 5 PEOPLE</span></div><div class="journey-arrow">→</div>
+      <div class="journey-step" data-journey="8"><b>8</b><span>YOU’RE IN!<br>JOIN THE WAITLIST</span></div>
     </nav>
 
     <main>
       <!-- 1. Landing -->
       <section class="screen hero-screen active" data-screen="landing">
+        <div class="hero-card">
         <div class="hero-flag" aria-hidden="true"></div>
         <div class="hero-content">
-          <div class="eyebrow">MagaCircle™</div>
+          <div class="hero-brand"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
+          <div class="tagline hero-tagline">★ &nbsp; POWER TO THE PEOPLE &nbsp; ★</div>
           <h1>HELP BUILD<br><span>MagaCircle™</span></h1>
           <p class="lead">MagaCircle™ is being built around the people who will use it.</p>
           <p>Tell us a little about yourself, what you're looking for, and what you'd like to accomplish.</p>
@@ -36,13 +40,14 @@
           <button class="btn btn-red" data-action="begin">LET'S BEGIN <span>→</span></button>
         </div>
         <div class="crowd" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
       </section>
 
       <!-- 2. Name + Email -->
       <section class="screen form-screen" data-screen="contact">
         <div class="screen-card">
           <div class="brand small"><span class="brand-red">Maga</span><span class="brand-blue">Circle</span><sup>™</sup></div>
-          <div class="form-intro">FIRST, LET'S<br><strong>GET TO KNOW YOU</strong></div>
+          <div class="form-intro">FIRST, LET’S<br><strong>GET TO KNOW YOU</strong></div>
           <form id="contactForm">
             <label for="name">What's your name?</label>
             <input id="name" name="name" type="text" autocomplete="given-name" placeholder="First Name" required />
