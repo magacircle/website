@@ -1,14 +1,16 @@
-# MagaCircle™ v1.4
+# MagaCircle™ v1.4 — Responsive Desktop/Laptop Redesign
 
-Responsive working prototype based on the approved mockup direction.
+This build keeps the approved mobile landing artwork and adds a true desktop/laptop composition based on the supplied desktop mockup example.
 
-## Important
-- The approved landing-page artwork is preserved as the exact supplied mockup crop.
+## Responsive behavior
+- Mobile: approved portrait landing artwork and compact mobile flow.
+- Tablet/iPad: responsive centered layouts with desktop composition beginning at 768px.
+- Laptop/Desktop: wide navigation, hero, forms, quiz panels, profile, referral and waitlist layouts.
 - No 8-stage journey/header is included.
-- No extra “We Build Together / We Win Together” slogan is included.
-- Desktop/laptop layouts keep the portrait experience centered at a deliberate size instead of stretching it across the screen.
-- Mobile uses the full-screen portrait experience.
-- Existing quiz, profile, referral, waitlist, and sharing functionality remains in place.
+- No extra slogan is included; the brand slogan is POWER TO THE PEOPLE.
 
 ## Run
-Open `index.html` directly or serve the folder through any static web server/GitHub Pages.
+Open `index.html` directly or serve the folder with any static web server. GitHub Pages works without a build step.
+
+## Prototype note
+Referral progress is simulated client-side for testing. Production referral verification should be implemented server-side.
