@@ -1,34 +1,31 @@
-# MagaCircle™ Version 1 — Full Visitor Test Prototype
+# MagaCircle™ v1.1 — Visual + Functional Prototype
 
-This is the first complete visitor-flow prototype for the MagaCircle™ launch site.
+This version keeps the tested v2 functionality and implements the selected MagaCircle™ visual direction from the design mockup.
 
-## Included flow
-1. Landing page with **POWER TO THE PEOPLE**
-2. Name + email capture
-3. 10-question quiz, one question per screen
-4. Three quiz sections: WHO ARE YOU? / WHAT DO YOU WANT? / WHAT WOULD YOU BUILD?
-5. Section transition screens after Q3 and Q7
-6. Back navigation during the quiz
-7. Personalized MagaCircle™ Profile (5 prototype profile types)
-8. 5-person invitation/referral step
-9. Text / email / copy-link / native share options
-10. Prototype referral controls so you can test 0/5 → 5/5 without real users
-11. Launch waitlist confirmation
-12. Launch membership teaser — actual membership levels are intentionally deferred until the next strategy pass
+## Included
+- Landing page with patriotic background treatment and crowd visual
+- POWER TO THE PEOPLE branding
+- Name/email capture
+- Exact locked 10-question quiz
+- One question per screen
+- Progress bar and back navigation
+- Section transition screens
+- Processing animation
+- 5 profile types
+- Profile identity card
+- Invite 5 referral flow
+- Text, email, copy-link and native share options
+- Prototype referral simulation controls
+- 5/5 waitlist confirmation
+- Responsive/mobile layout
+- LocalStorage prototype persistence
+- Slim journey indicator matching the mockup direction
 
-## How to test locally
-Open `index.html` in a browser. For the most realistic behavior, serve the folder with a simple local web server (for example, VS Code Live Server or `python -m http.server`).
+## Test locally
+Open `index.html` in a browser or serve the folder with any static web server.
 
 ## GitHub Pages
-Upload `index.html`, `styles.css`, `app.js`, and this README to a GitHub repository. Enable GitHub Pages from the repository settings. No build step is required.
+Upload `index.html`, `styles.css`, `app.js`, and this README to a repository and enable GitHub Pages.
 
-## Important prototype notes
-- Email collection is currently browser-only. It is **not connected to a CRM/email service**.
-- Referral tracking is currently simulated in the browser with LocalStorage. The "Prototype testing controls" let you add one test referral at a time.
-- Production referral verification should be server-side and tied to unique referral links/accounts before launch.
-- The profile scoring is a first-version scoring model intended for testing the experience. We can refine the scoring after you test how the results feel.
-- Membership levels/pricing are intentionally not finalized in this build.
-- The visual treatment follows the current direction: stronger flag imagery on landing/profile/final screens and cleaner quiz screens, while keeping the **POWER TO THE PEOPLE** slogan primarily on key brand moments rather than every quiz question.
-
-## Resetting your test
-The final screen's **RETURN TO HOME** button clears the prototype LocalStorage state and reloads the site.
+## Important production notes
+The referral counter is only a prototype. A production launch should use unique referral links, server-side referral attribution/verification, anti-abuse controls, consent/privacy language, analytics, and a real waitlist database/email service.

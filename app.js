@@ -22,8 +22,8 @@ const profiles = {
 const state={screen:'landing',name:'',email:'',index:0,answers:Array(10).fill(null),referrals:0,scores:{Builder:0,Connector:0,Entrepreneur:0,Community:0,Visionary:0},profile:null};
 const $=s=>document.querySelector(s); const $$=s=>document.querySelectorAll(s);
 function show(name){$$('.screen').forEach(s=>s.classList.toggle('active',s.dataset.screen===name));state.screen=name;window.scrollTo({top:0,behavior:'smooth'});}
-function save(){localStorage.setItem('magacircle_v2',JSON.stringify(state));}
-function load(){try{const x=JSON.parse(localStorage.getItem('magacircle_v2'));if(x){Object.assign(state,x);}}catch(e){}}
+function save(){localStorage.setItem('magacircle_v1_1',JSON.stringify(state));}
+function load(){try{const x=JSON.parse(localStorage.getItem('magacircle_v1_1'));if(x){Object.assign(state,x);}}catch(e){}}
 function renderQuestion(){const x=questions[state.index];$('#questionCounter').textContent=`${state.index+1} / 10`;$('#progressFill').style.width=`${(state.index+1)*10}%`;$('#sectionLabel').textContent=x.section;$('#questionText').textContent=x.q;const wrap=$('#options');wrap.innerHTML='';x.options.forEach((o,i)=>{const b=document.createElement('button');b.className='option'+(state.answers[state.index]===i?' selected':'');b.innerHTML=`<span class="opt-icon">${['●','◌','✦','◆','♥','○'][i]||'○'}</span><span>${o}</span>`;b.addEventListener('click',()=>{state.answers[state.index]=i;renderQuestion();save();});wrap.appendChild(b)});$('#continueBtn').disabled=state.answers[state.index]===null;$('#backBtn').style.visibility=state.index===0?'hidden':'visible';}
 function startQuiz(){show('contact');}
 function beginQuiz(){state.index=0;state.answers=Array(10).fill(null);renderQuestion();show('quiz');save();}
@@ -33,7 +33,7 @@ function buildProfile(){state.scores={Builder:0,Connector:0,Entrepreneur:0,Commu
 function referralRender(){const n=Math.min(5,state.referrals);$('#refCount').textContent=n;$('#refDots').querySelectorAll('span').forEach((d,i)=>d.classList.toggle('filled',i<n));if(n>=5){setTimeout(()=>show('waitlist'),350);}save();}
 function shareText(){return `I've been helping shape MagaCircle™ before launch. Take the 10-question quiz and discover your MagaCircle™ Profile: ${location.href}`}
 async function share(kind){const url=location.href;const text=shareText();if(kind==='copy'){try{await navigator.clipboard.writeText(text);$('#shareStatus').textContent='Invitation copied to your clipboard.';}catch(e){$('#shareStatus').textContent='Copy is unavailable in this browser—use the Share option instead.'}}else if(kind==='native'&&navigator.share){try{await navigator.share({title:'MagaCircle™',text,url})}catch(e){}}else if(kind==='text'){location.href=`sms:?&body=${encodeURIComponent(text)}`;}else if(kind==='email'){location.href=`mailto:?subject=${encodeURIComponent('Join me on MagaCircle™')}&body=${encodeURIComponent(text)}`;}else{$('#shareStatus').textContent='Choose a sharing option above.';}}
-function reset(){localStorage.removeItem('magacircle_v2');location.reload();}
+function reset(){localStorage.removeItem('magacircle_v1_1');location.reload();}
 function showFinalShare(){const p=$('#finalSharePanel');p.innerHTML=`<button class="share-btn" data-share="text">💬<span>TEXT</span></button><button class="share-btn" data-share="email">✉️<span>EMAIL</span></button><button class="share-btn" data-share="copy">🔗<span>COPY LINK</span></button><button class="share-btn" data-share="native">↗️<span>SHARE</span></button>`;p.classList.remove('hidden');p.querySelectorAll('[data-share]').forEach(b=>b.onclick=()=>share(b.dataset.share));}
 
 $('#contactForm').addEventListener('submit',e=>{e.preventDefault();state.name=$('#name').value.trim();state.email=$('#email').value.trim();beginQuiz();});
