@@ -1,12 +1,18 @@
-# MagaCircle™ v1.8 — Exact Mockup Landing Page
+# MagaCircle™ v1.8.1 — Mobile Responsive Fix
 
-This prototype preserves the existing MagaCircle™ quiz flow but replaces the landing page visual implementation with the supplied desktop landing-page mockup as the exact visual source.
+This is the v1.8 landing build with the desktop landing page preserved exactly and the approved mobile landing artwork preserved visually.
 
-## Landing page
-- Desktop/laptop: `assets/desktop_landing_mockup_exact.png` is displayed responsively at full browser width.
-- Mobile: `assets/approved_landing_mobile.png` is displayed as the approved mobile landing design.
-- Transparent functional hotspots make the visible desktop/mobile CTAs clickable and route into the existing name/email form.
-- The desktop image includes the exact mockup copy and visual composition. No additional slogan or 8-stage journey is added.
+## Mobile fix
 
-## GitHub Pages
-Upload `index.html`, `styles.css`, `app.js`, and the `assets` folder to the repository. Open the GitHub Pages URL and test the landing CTA.
+The prior v1.8 mobile landing forced the entire 764×1936 mobile artwork into the device viewport using `height: 100dvh` and `object-fit: contain`. That made the full page behave like a scaled poster rather than a responsive, scrollable mobile page.
+
+v1.8.1 changes the mobile landing to:
+
+- Scale the approved mobile artwork to `width: 100%` with natural aspect ratio.
+- Allow the page to scroll vertically on phones.
+- Keep the artwork's proportions intact (no stretching/cropping).
+- Keep the transparent LET'S BEGIN hotspot aligned to the button as the image scales.
+- Preserve the desktop v1.8 exact mockup and desktop hotspots unchanged.
+- Preserve the existing signup/quiz/referral/waitlist flow.
+
+The HTML already includes the standard responsive viewport meta tag.
