@@ -58,7 +58,11 @@
      approved artwork scale to the device width and allow normal scrolling. */
   .exact-landing-screen{min-height:100dvh;height:auto;overflow-x:hidden;overflow-y:auto}
   .exact-desktop-landing{display:none}
-  .exact-mobile-landing{display:block;position:relative;width:100%;height:auto;min-height:0;background:#071b4b;line-height:0}
+  /* Keep the approved artwork at full phone width, but use the viewport as
+     the visible hero area. The artwork has intentional dark space below the
+     CTA, so clipping that lower space lets LET'S BEGIN remain on-screen
+     without shrinking or distorting the responsive artwork. */
+  .exact-mobile-landing{display:block;position:relative;width:100%;height:100dvh;min-height:100dvh;background:#071b4b;line-height:0;overflow:hidden}
   .exact-mobile-art{display:block;width:100%;height:auto;max-width:100%;object-fit:initial;object-position:initial;background:#071b4b}
   .mobile-begin{left:14%;width:72%;top:85%;height:8.5%}
 }
