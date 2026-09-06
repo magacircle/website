@@ -27,6 +27,7 @@ shell(`<section class="screen landing-screen exact-landing-screen">
   <div class="exact-mobile-landing">
     <img src="assets/approved_landing_mobile.png" alt="MagaCircle™ mobile landing page" class="exact-mobile-art">
     <button class="exact-hotspot mobile-begin" aria-label="Let's begin" onclick="go('form')"></button>
+    <button class="mobile-sticky-cta" aria-label="Let's begin" onclick="go('form')">LET'S BEGIN <span>→</span></button>
   </div>
   <div class="sr-only">MagaCircle™ — Power to the People. Help Build MagaCircle™. MagaCircle™ is being built around the people who will use it. Tell us a little about yourself, what you're looking for, and what you'd like to accomplish. Take the quiz and help shape the future of MagaCircle™. Let's begin.</div>
 </section>`)}

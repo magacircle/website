@@ -65,3 +65,22 @@
   .mobile-begin{left:2%;width:96%;top:85%;height:8.5%}
 }
 @media(min-width:681px){body{background:#fff}.app{padding:0}.shell{width:100%;min-height:100dvh;border:0;border-radius:0;box-shadow:none}}
+
+
+/* v1.8.4 mobile responsiveness: full-width artwork with no side gap/border and an always-visible CTA. */
+.mobile-sticky-cta{display:none}
+@media(max-width:680px){
+  html,body,#app{width:100%;min-height:100%;margin:0;padding:0;background:#071b4b}
+  .app,.shell,.exact-landing-screen{width:100%;margin:0;border:0!important;border-radius:0!important;box-shadow:none!important}
+  .exact-mobile-landing{width:100%;margin:0;padding:0;min-height:100dvh;overflow:visible;background:#071b4b;text-align:left}
+  .exact-mobile-art{width:100%;max-width:none;height:auto;margin:0;border:0!important;border-radius:0!important;box-shadow:none!important;background:#071b4b}
+  .mobile-begin{left:14%;width:72%;top:85%;height:8.5%}
+  .mobile-sticky-cta{
+    display:block;position:fixed;z-index:9999;left:50%;transform:translateX(-50%);
+    width:min(72vw,560px);min-height:58px;bottom:calc(16px + env(safe-area-inset-bottom));
+    border:0;border-radius:10px;background:#e20b14;color:#fff;
+    font:900 clamp(15px,4.2vw,20px)/1 Montserrat,Arial,sans-serif;letter-spacing:.2px;
+    box-shadow:0 8px 22px rgba(0,0,0,.28);cursor:pointer
+  }
+  .mobile-sticky-cta span{font-size:1.45em;margin-left:8px;vertical-align:-1px}
+}
