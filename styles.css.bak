@@ -54,14 +54,16 @@
 .desktop-waitlist{left:83.75%;top:3.4%;width:12.2%;height:5.5%}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:680px){
-  /* Mobile landing: keep the approved artwork responsive AND preserve normal
-     page scrolling. The artwork is reduced slightly so the built-in
-     LET'S BEGIN button is visible in the first viewport, while the remaining
-     artwork can still be reached by scrolling. */
+  /* Mobile landing is a tall page, not a viewport-sized poster. Let the
+     approved artwork scale to the device width and allow normal scrolling. */
   .exact-landing-screen{min-height:100dvh;height:auto;overflow-x:hidden;overflow-y:auto}
   .exact-desktop-landing{display:none}
-  .exact-mobile-landing{display:block;position:relative;width:100%;height:auto;min-height:100dvh;background:#071b4b;line-height:0;overflow:visible;text-align:center}
-  .exact-mobile-art{display:block;width:96%;height:auto;max-width:100%;margin:0 auto;object-fit:initial;object-position:initial;background:#071b4b}
-  .mobile-begin{left:2%;width:96%;top:85%;height:8.5%}
+  /* Keep the approved artwork at full phone width, but use the viewport as
+     the visible hero area. The artwork has intentional dark space below the
+     CTA, so clipping that lower space lets LET'S BEGIN remain on-screen
+     without shrinking or distorting the responsive artwork. */
+  .exact-mobile-landing{display:block;position:relative;width:100%;height:100dvh;min-height:100dvh;background:#071b4b;line-height:0;overflow:hidden}
+  .exact-mobile-art{display:block;width:100%;height:auto;max-width:100%;object-fit:initial;object-position:initial;background:#071b4b}
+  .mobile-begin{left:14%;width:72%;top:85%;height:8.5%}
 }
 @media(min-width:681px){body{background:#fff}.app{padding:0}.shell{width:100%;min-height:100dvh;border:0;border-radius:0;box-shadow:none}}
