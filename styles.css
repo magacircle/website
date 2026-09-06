@@ -84,3 +84,24 @@
   }
   .mobile-sticky-cta span{font-size:1.45em;margin-left:8px;vertical-align:-1px}
 }
+
+
+/* v1.8.5 mobile landing correction: one original CTA only.
+   The approved artwork fills the initial portrait viewport so the baked-in
+   LET'S BEGIN button is visible immediately, with no added floating button
+   and no side border/gap. */
+@media (max-width:680px) and (orientation:portrait){
+  html,body,#app{width:100%;min-height:100%;margin:0;padding:0;background:#071b4b;overflow-x:hidden}
+  .app,.shell,.exact-landing-screen{width:100%;min-height:100dvh;margin:0;padding:0;border:0!important;border-radius:0!important;box-shadow:none!important;background:#071b4b;overflow-x:hidden;overflow-y:auto}
+  .exact-desktop-landing{display:none!important}
+  .exact-mobile-landing{display:block;width:100%;min-height:100dvh;margin:0;padding:0;background:#071b4b;line-height:0;overflow:visible}
+  .exact-mobile-art{display:block;width:100%;height:100dvh;min-height:100dvh;max-width:none;margin:0;padding:0;border:0!important;border-radius:0!important;box-shadow:none!important;object-fit:fill;background:#071b4b}
+  .mobile-sticky-cta{display:none!important}
+  .mobile-begin{left:14%;width:72%;top:84%;height:10%;bottom:auto}
+}
+@media (max-width:680px) and (orientation:landscape){
+  .exact-landing-screen{overflow-x:hidden;overflow-y:auto}
+  .exact-mobile-landing{min-height:100dvh;height:auto;overflow:visible}
+  .exact-mobile-art{width:100%;height:auto;min-height:0;object-fit:initial}
+  .mobile-sticky-cta{display:none!important}
+}
